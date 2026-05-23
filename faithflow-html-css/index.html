@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="FaithFlow Journal is a Christian gratitude, scripture, prayer, and God moments journal website."
+    />
+    <title>FaithFlow Journal | Christian Scripture & Prayer Journal</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Playfair+Display:wght@600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <a class="brand-mark" href="#top" aria-label="FaithFlow Journal home">FF</a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#gratitude">Gratitude</a>
+        <a href="#scriptures">Scriptures</a>
+        <a href="#prayer">Prayer</a>
+        <a href="#moments">God Moments</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- HERO SECTION -->
+      <section class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-copy reveal-up">
+          <p class="eyebrow">✦ FaithFlow Journal</p>
+          <h1 id="hero-title">
+            Build a living archive of gratitude, scripture, prayer, and God’s faithfulness.
+          </h1>
+          <p class="hero-lede">
+            A personal Christian journal designed to help you record daily gratitude, organize scriptures by theme,
+            track prayer requests and questions, and remember the moments where you can clearly see God working in your life.
+          </p>
+
+          <div class="hero-actions">
+            <a class="primary-link" href="#gratitude">Begin today’s entry</a>
+            <a class="secondary-link" href="#scriptures">Open scripture library</a>
+          </div>
+        </div>
+
+        <aside class="hero-image-card reveal-up" aria-label="Open devotional journal image">
+          <img
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663625299718/hPVuwR9yLCeuF9Akyv3K5i/faithflow-open-journal-hero-VrSvjFyg2VMjcfmfYxEdNe.webp"
+            alt="Open journal and Bible in warm morning light"
+          />
+          <div class="floating-note">
+            <span>Today’s focus</span>
+            <strong>Notice grace. Record faithfulness.</strong>
+          </div>
+        </aside>
+      </section>
+
+      <!-- STATS SUMMARY -->
+      <section class="stats-strip" aria-label="Journal summary">
+        <article class="stat-card">
+          <strong>1</strong>
+          <span>gratitude entries</span>
+        </article>
+        <article class="stat-card">
+          <strong>2</strong>
+          <span>scriptures saved</span>
+        </article>
+        <article class="stat-card">
+          <strong>1</strong>
+          <span>answered prayers</span>
+        </article>
+        <article class="stat-card">
+          <strong>1</strong>
+          <span>God moments</span>
+        </article>
+      </section>
+
+      <!-- GRATITUDE SECTION -->
+      <section class="section-shell gratitude-layout" id="gratitude" aria-labelledby="gratitude-title">
+        <div class="section-intro">
+          <p class="eyebrow">♡ Daily gratitude</p>
+          <h2 id="gratitude-title">Start with thanksgiving.</h2>
+          <p>
+            Use this space to build the daily habit of recognizing God’s kindness, provision, protection,
+            correction, and grace. In a real app, these entries could be saved with JavaScript, local storage,
+            or a database.
+          </p>
+        </div>
+
+        <form class="journal-panel">
+          <label for="gratitude-entry">What are you grateful for today?</label>
+          <textarea id="gratitude-entry" placeholder="Lord, thank You for..."></textarea>
+          <button class="ink-button" type="button">+ Save gratitude</button>
+        </form>
+
+        <div class="entry-stack">
+          <article class="lined-card">
+            <time datetime="2026-05-04">2026-05-04</time>
+            <p>
+              Thank You, Lord, for daily grace, clear direction, and the gift of growing in Your Word.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SCRIPTURE IMAGE FEATURE -->
+      <section class="image-feature" aria-label="Scripture library feature image">
+        <img
+          src="https://d2xsxph8kpxj0f.cloudfront.net/310519663625299718/hPVuwR9yLCeuF9Akyv3K5i/scripture-library-cards-Fo8vBYt5TYgpDt9USgXoM6.webp"
+          alt="Layered scripture library cards and study Bible"
+        />
+
+        <div>
+          <p class="eyebrow">▦ Personal word library</p>
+          <h2>Collect the scriptures that speak to you as you study.</h2>
+          <p>
+            The goal is not just storage. It is a searchable personal testimony of how the Word has met you
+            in real seasons.
+          </p>
+        </div>
+      </section>
+
+      <!-- SCRIPTURE ARCHIVE SECTION -->
+      <section class="section-shell scripture-layout" id="scriptures" aria-labelledby="scriptures-title">
+        <div class="section-intro wide">
+          <p class="eyebrow">▤ Scripture archive</p>
+          <h2 id="scriptures-title">Record verses by spiritual theme.</h2>
+          <p>
+            Save verses into categories such as love, hope, faith, healing, identity in Christ,
+            spiritual warfare, wisdom, authority, consecration, praise, and more.
+          </p>
+        </div>
+
+        <form class="journal-panel scripture-form">
+          <label for="category">Category</label>
+          <select id="category">
+            <option>Love</option>
+            <option>Hope</option>
+            <option>Faith</option>
+            <option>Healing</option>
+            <option>Signs and Wonders</option>
+            <option>Salvation</option>
+            <option>My Identity in Christ</option>
+            <option>Dreams</option>
+            <option>Unusual Depths of God</option>
+            <option>Spiritual Warfare</option>
+            <option>Prayer</option>
+            <option>Wisdom</option>
+            <option>Success</option>
+            <option>Prosperity</option>
+            <option>Vision</option>
+            <option>Authority</option>
+            <option>Supernatural</option>
+            <option>Relationships</option>
+            <option>Consecration</option>
+            <option>Praise</option>
+          </select>
+
+          <label for="reference">Scripture reference</label>
+          <input id="reference" type="text" placeholder="Romans 8:37" />
+
+          <label for="verse">Verse text</label>
+          <textarea id="verse" placeholder="Write the scripture here..."></textarea>
+
+          <label for="note">Why did this speak to you?</label>
+          <textarea id="note" placeholder="This stood out because..."></textarea>
+
+          <button class="ink-button" type="button">✎ Add scripture</button>
+        </form>
+
+        <div class="category-cloud" aria-label="Scripture categories">
+          <span class="category-chip active">Love <b>0</b></span>
+          <span class="category-chip">Hope <b>0</b></span>
+          <span class="category-chip">Faith <b>0</b></span>
+          <span class="category-chip">Healing <b>0</b></span>
+          <span class="category-chip">Signs and Wonders <b>0</b></span>
+          <span class="category-chip">Salvation <b>0</b></span>
+          <span class="category-chip active">My Identity in Christ <b>1</b></span>
+          <span class="category-chip">Dreams <b>0</b></span>
+          <span class="category-chip">Unusual Depths of God <b>0</b></span>
+          <span class="category-chip">Spiritual Warfare <b>0</b></span>
+          <span class="category-chip">Prayer <b>0</b></span>
+          <span class="category-chip active">Wisdom <b>1</b></span>
+          <span class="category-chip">Success <b>0</b></span>
+          <span class="category-chip">Prosperity <b>0</b></span>
+          <span class="category-chip">Vision <b>0</b></span>
+          <span class="category-chip">Authority <b>0</b></span>
+          <span class="category-chip">Supernatural <b>0</b></span>
+          <span class="category-chip">Relationships <b>0</b></span>
+          <span class="category-chip">Consecration <b>0</b></span>
+          <span class="category-chip">Praise <b>0</b></span>
+        </div>
+
+        <div class="scripture-cards">
+          <article class="scripture-card">
+            <span>My Identity in Christ</span>
+            <h3>2 Corinthians 5:17</h3>
+            <blockquote>
+              If anyone is in Christ, he is a new creation. The old has passed away; behold, the new has come.
+            </blockquote>
+            <p>A reminder to see myself through the finished work of Christ.</p>
+          </article>
+
+          <article class="scripture-card">
+            <span>Wisdom</span>
+            <h3>James 1:5</h3>
+            <blockquote>
+              If any of you lacks wisdom, let him ask God, who gives generously to all without reproach.
+            </blockquote>
+            <p>This belongs in the library for decision-making seasons.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- PRAYER SECTION -->
+      <section class="split-showcase" id="prayer" aria-labelledby="prayer-title">
+        <div class="showcase-image">
+          <img
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663625299718/hPVuwR9yLCeuF9Akyv3K5i/prayer-answered-cards-ScRGybaGnc69kv8f4As8vy.webp"
+            alt="Prayer cards with a check mark beside candlelight"
+          />
+        </div>
+
+        <div class="showcase-content">
+          <p class="eyebrow">▧ Prayer and questions</p>
+          <h2 id="prayer-title">Track requests, questions, and answered prayers.</h2>
+          <p>
+            Record what you are bringing before the Lord, including questions you are asking the Holy Spirit.
+            Mark them answered when you see clarity, provision, confirmation, or breakthrough.
+          </p>
+
+          <form class="journal-panel compact-panel">
+            <label for="prayer-kind">Entry type</label>
+            <select id="prayer-kind">
+              <option>Prayer Request</option>
+              <option>Question for the Holy Spirit</option>
+            </select>
+
+            <label for="prayer-title-input">Title</label>
+            <input id="prayer-title-input" type="text" placeholder="Healing for a loved one" />
+
+            <label for="prayer-details">Details</label>
+            <textarea id="prayer-details" placeholder="What are you asking, waiting for, or discerning?"></textarea>
+
+            <button class="ink-button" type="button">+ Save request</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="answered-board" aria-label="Prayer request list">
+        <article class="prayer-card">
+          <div>
+            <span>Prayer Request</span>
+            <h3>Direction for this season</h3>
+            <p>Asking God for wisdom, boldness, and alignment with His timing.</p>
+          </div>
+          <button type="button">○ Mark answered</button>
+        </article>
+
+        <article class="prayer-card answered">
+          <div>
+            <span>Question for the Holy Spirit</span>
+            <h3>What are You teaching me this week?</h3>
+            <p>Listening for repeated scriptures, confirmations, and inner conviction.</p>
+          </div>
+          <button type="button">✓ Answered</button>
+        </article>
+      </section>
+
+      <!-- GOD MOMENTS SECTION -->
+      <section class="section-shell moments-layout" id="moments" aria-labelledby="moments-title">
+        <div class="moment-copy">
+          <p class="eyebrow">✎ Experiences with God</p>
+          <h2 id="moments-title">Write down where you clearly see God working.</h2>
+          <p>
+            These entries help you remember patterns of God’s faithfulness: timely conversations, answered prayers,
+            unusual peace, supernatural provision, dreams, conviction, protection, and daily evidence of His hand.
+          </p>
+        </div>
+
+        <div class="moment-image">
+          <img
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663625299718/hPVuwR9yLCeuF9Akyv3K5i/god-moments-window-btm5maNum9hvJJgoPvBUEr.webp"
+            alt="Open journal by a sunlit window"
+          />
+        </div>
+
+        <form class="journal-panel moment-form">
+          <label for="moment-title">Moment title</label>
+          <input id="moment-title" type="text" placeholder="God opened a door" />
+
+          <label for="moment-details">What happened?</label>
+          <textarea
+            id="moment-details"
+            placeholder="Describe the moment clearly so you can remember it later..."
+          ></textarea>
+
+          <button class="ink-button" type="button">+ Save God moment</button>
+        </form>
+
+        <div class="entry-stack moment-list">
+          <article class="lined-card">
+            <time datetime="2026-05-04">2026-05-04</time>
+            <h3>A timely reminder</h3>
+            <p>A scripture I read in the morning came up again in conversation later that day.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>FaithFlow Journal</p>
+      <span>A portfolio-ready Christian web app concept built around remembrance, scripture, and prayer.</span>
+    </footer>
+  </body>
+</html>

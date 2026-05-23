@@ -1,0 +1,677 @@
+/*
+  FaithFlow Journal - Standalone CSS
+  Design direction: Sacred Editorial Modernism.
+  Visual language: warm parchment, olive shadows, antique gold accents,
+  refined serif headings, calm whitespace, and layered journal cards.
+*/
+
+:root {
+  --paper: #f7efe0;
+  --paper-deep: #eadcc6;
+  --vellum: #fffaf0;
+  --ink: #241f18;
+  --soft-ink: #615648;
+  --olive: #55613c;
+  --olive-deep: #30391f;
+  --gold: #b4873e;
+  --line: rgba(68, 54, 33, 0.18);
+  --shadow: 0 24px 70px rgba(71, 55, 31, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(180, 135, 62, 0.16), transparent 34rem),
+    radial-gradient(circle at 88% 14%, rgba(85, 97, 60, 0.14), transparent 28rem),
+    linear-gradient(135deg, #f7efe0, #f3e7d1 42%, #eadcc6);
+  color: var(--ink);
+  font-family: "Nunito Sans", system-ui, sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a,
+select {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--ink);
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+p {
+  line-height: 1.75;
+}
+
+::selection {
+  background: rgba(180, 135, 62, 0.32);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem clamp(1rem, 4vw, 4rem);
+  border-bottom: 1px solid rgba(80, 64, 39, 0.12);
+  background: rgba(247, 239, 224, 0.78);
+  backdrop-filter: blur(18px);
+}
+
+.brand-mark {
+  display: grid;
+  height: 3rem;
+  width: 3rem;
+  place-items: center;
+  border: 1px solid rgba(180, 135, 62, 0.48);
+  border-radius: 999px;
+  color: var(--olive-deep);
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(82, 61, 31, 0.12);
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: clamp(0.65rem, 2vw, 1.35rem);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.main-nav a {
+  position: relative;
+  color: var(--soft-ink);
+  text-decoration: none;
+}
+
+.main-nav a::after {
+  position: absolute;
+  bottom: -0.32rem;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  content: "";
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 260ms ease;
+}
+
+.main-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.hero-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.84fr) minmax(20rem, 1.16fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+  padding: clamp(4rem, 8vw, 7.5rem) clamp(1rem, 5vw, 5rem) clamp(3rem, 6vw, 5rem);
+}
+
+.hero-copy {
+  max-width: 48rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  margin-bottom: 1rem;
+  color: var(--olive);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero-copy h1 {
+  max-width: 11ch;
+  margin-bottom: 1.45rem;
+  font-size: clamp(3.1rem, 7vw, 6.8rem);
+  letter-spacing: -0.06em;
+  line-height: 0.92;
+}
+
+.hero-lede {
+  max-width: 43rem;
+  color: var(--soft-ink);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(1.04rem, 1.6vw, 1.28rem);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
+.primary-link,
+.secondary-link,
+.ink-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.05rem;
+  padding: 0.85rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 900;
+  gap: 0.45rem;
+  text-decoration: none;
+  transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
+}
+
+.primary-link,
+.ink-button {
+  border: 1px solid var(--olive-deep);
+  background: var(--olive-deep);
+  color: #fffaf0;
+  box-shadow: 0 18px 38px rgba(48, 57, 31, 0.22);
+}
+
+.secondary-link {
+  border: 1px solid rgba(92, 76, 47, 0.2);
+  background: rgba(255, 250, 240, 0.62);
+  color: var(--ink);
+}
+
+.primary-link:hover,
+.secondary-link:hover,
+.ink-button:hover {
+  transform: translateY(-2px);
+}
+
+.hero-image-card {
+  position: relative;
+  min-height: 32rem;
+  overflow: hidden;
+  border: 1px solid rgba(85, 70, 43, 0.14);
+  border-radius: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.hero-image-card img,
+.image-feature img,
+.showcase-image img,
+.moment-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.floating-note {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  display: grid;
+  max-width: 17rem;
+  gap: 0.2rem;
+  padding: 1rem;
+  border: 1px solid rgba(180, 135, 62, 0.28);
+  border-radius: 1.3rem;
+  background: rgba(255, 250, 240, 0.86);
+  box-shadow: 0 18px 45px rgba(53, 42, 23, 0.16);
+}
+
+.floating-note span,
+.stat-card span,
+.scripture-card span,
+.prayer-card span {
+  color: var(--olive);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  margin: 0 clamp(1rem, 5vw, 5rem) clamp(3rem, 6vw, 5rem);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 1.4rem;
+  background: var(--line);
+}
+
+.stat-card {
+  padding: 1.25rem;
+  background: rgba(255, 250, 240, 0.58);
+}
+
+.stat-card strong {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1;
+}
+
+.section-shell,
+.split-showcase,
+.image-feature,
+.answered-board {
+  margin: 0 clamp(1rem, 5vw, 5rem) clamp(3rem, 6vw, 5rem);
+}
+
+.section-shell {
+  position: relative;
+  padding: clamp(1.25rem, 4vw, 3rem);
+  border: 1px solid rgba(85, 70, 43, 0.14);
+  border-radius: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.section-shell::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  border-radius: inherit;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0 2.1rem,
+    rgba(90, 72, 43, 0.06) 2.12rem 2.18rem
+  );
+}
+
+.gratitude-layout,
+.scripture-layout,
+.moments-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(18rem, 1fr);
+  gap: clamp(1.25rem, 3vw, 2rem);
+  background: rgba(255, 250, 240, 0.66);
+}
+
+.section-intro,
+.moment-copy,
+.journal-panel,
+.entry-stack,
+.category-cloud,
+.scripture-cards {
+  position: relative;
+  z-index: 1;
+}
+
+.section-intro h2,
+.image-feature h2,
+.showcase-content h2,
+.moment-copy h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(2.1rem, 4vw, 4rem);
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.section-intro p,
+.image-feature p,
+.showcase-content p,
+.moment-copy p {
+  max-width: 42rem;
+  color: var(--soft-ink);
+}
+
+.journal-panel {
+  align-self: start;
+  display: grid;
+  gap: 0.7rem;
+  padding: clamp(1rem, 3vw, 1.35rem);
+  border: 1px solid rgba(92, 76, 47, 0.18);
+  border-radius: 1.4rem;
+  background: rgba(255, 250, 240, 0.82);
+  box-shadow: 0 16px 44px rgba(77, 58, 31, 0.12);
+}
+
+.journal-panel label {
+  color: var(--olive-deep);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.journal-panel textarea,
+.journal-panel input,
+.journal-panel select {
+  width: 100%;
+  padding: 0.88rem 0.95rem;
+  border: 1px solid rgba(83, 65, 37, 0.2);
+  border-radius: 1rem;
+  outline: none;
+  background: rgba(247, 239, 224, 0.88);
+  color: var(--ink);
+  transition: border 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.journal-panel textarea {
+  min-height: 8.4rem;
+  resize: vertical;
+}
+
+.journal-panel input:focus,
+.journal-panel textarea:focus,
+.journal-panel select:focus {
+  border-color: rgba(180, 135, 62, 0.8);
+  background: #fffaf0;
+  box-shadow: 0 0 0 4px rgba(180, 135, 62, 0.12);
+}
+
+.entry-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.lined-card,
+.scripture-card,
+.prayer-card {
+  border: 1px solid rgba(92, 76, 47, 0.16);
+  border-radius: 1.2rem;
+  background: rgba(255, 250, 240, 0.72);
+  box-shadow: 0 12px 32px rgba(83, 62, 32, 0.1);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.lined-card:hover,
+.scripture-card:hover,
+.prayer-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 46px rgba(83, 62, 32, 0.15);
+}
+
+.lined-card {
+  padding: 1.15rem;
+}
+
+.lined-card time {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.lined-card h3 {
+  margin-bottom: 0.35rem;
+  font-size: 1.35rem;
+}
+
+.image-feature {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.9fr) minmax(0, 1fr);
+  gap: clamp(1.25rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.image-feature img,
+.showcase-image,
+.moment-image {
+  overflow: hidden;
+  border: 1px solid rgba(85, 70, 43, 0.14);
+  border-radius: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.scripture-layout {
+  grid-template-columns: minmax(20rem, 0.82fr) minmax(0, 1fr);
+}
+
+.section-intro.wide {
+  grid-column: 1 / -1;
+}
+
+.scripture-form {
+  grid-row: span 2;
+}
+
+.category-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  gap: 0.65rem;
+}
+
+.category-chip {
+  padding: 0.52rem 0.75rem;
+  border: 1px solid rgba(92, 76, 47, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 250, 240, 0.54);
+  color: var(--soft-ink);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.category-chip.active {
+  border-color: rgba(85, 97, 60, 0.28);
+  background: rgba(85, 97, 60, 0.13);
+  color: var(--olive-deep);
+}
+
+.category-chip b {
+  margin-left: 0.25rem;
+  color: var(--gold);
+}
+
+.scripture-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.scripture-card {
+  padding: 1.2rem;
+}
+
+.scripture-card h3 {
+  margin: 0.45rem 0 0.7rem;
+  font-size: 1.45rem;
+}
+
+.scripture-card blockquote {
+  padding-left: 0.8rem;
+  border-left: 3px solid rgba(180, 135, 62, 0.6);
+  color: var(--ink);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.scripture-card p {
+  margin-top: 0.75rem;
+  color: var(--soft-ink);
+  font-size: 0.92rem;
+}
+
+.split-showcase {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.85fr) minmax(0, 1fr);
+  gap: clamp(1.25rem, 4vw, 3rem);
+  align-items: stretch;
+}
+
+.showcase-content {
+  align-self: center;
+}
+
+.compact-panel {
+  margin-top: 1.35rem;
+}
+
+.answered-board {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.prayer-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem;
+}
+
+.prayer-card h3 {
+  margin: 0.35rem 0;
+  font-size: 1.35rem;
+}
+
+.prayer-card p {
+  color: var(--soft-ink);
+  font-size: 0.95rem;
+}
+
+.prayer-card button {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.68rem 0.9rem;
+  border: 1px solid rgba(92, 76, 47, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 250, 240, 0.9);
+  color: var(--olive-deep);
+  font-weight: 900;
+}
+
+.prayer-card.answered {
+  border-color: rgba(85, 97, 60, 0.3);
+  background: rgba(85, 97, 60, 0.14);
+}
+
+.moments-layout {
+  grid-template-columns: minmax(0, 0.88fr) minmax(18rem, 0.9fr);
+}
+
+.moment-image {
+  min-height: 22rem;
+}
+
+.moment-form {
+  grid-column: 1;
+}
+
+.moment-list {
+  grid-column: 2;
+  grid-row: span 2;
+}
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem 1rem;
+  padding: 2rem clamp(1rem, 5vw, 5rem);
+  border-top: 1px solid rgba(80, 64, 39, 0.12);
+  color: var(--soft-ink);
+}
+
+.site-footer p {
+  color: var(--ink);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.reveal-up {
+  animation: revealUp 760ms ease both;
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1050px) {
+  .hero-section,
+  .gratitude-layout,
+  .scripture-layout,
+  .split-showcase,
+  .image-feature,
+  .moments-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .scripture-form,
+  .moment-form,
+  .moment-list {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .hero-copy h1 {
+    max-width: 13ch;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero-section {
+    padding-top: 3rem;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(3rem, 16vw, 4.4rem);
+  }
+
+  .hero-image-card {
+    min-height: 22rem;
+  }
+
+  .stats-strip,
+  .scripture-cards,
+  .answered-board {
+    grid-template-columns: 1fr;
+  }
+
+  .prayer-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
